@@ -158,3 +158,7 @@ export async function queryNotices(params = {}) {
 export async function getFakeCaptcha(mobile) {
   return request(`/api/captcha?mobile=${mobile}`);
 }
+
+export async function queryUser(params) {
+  return request(`/api/users?${stringify(params)}`);
+}
